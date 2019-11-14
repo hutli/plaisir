@@ -1,0 +1,50 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{wrapfig}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+\usepackage[english]{babel}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\rightmark}
+
+\setlength{\headheight}{14.5pt}
+\setcounter{secnumdepth}{0}
+
+\newcommand\chapter[1]{%
+  \refstepcounter{section}%
+  \addcontentsline{toc}{section}{#1}%
+  \sectionmark{#1}%
+}
+
+\newcommand\subchapter[1]{%
+  \refstepcounter{subsection}%
+  \addcontentsline{toc}{subsection}{#1}%
+  \subsectionmark{#1}%
+}
+
+\renewcommand{\sectionmark}[1]{%
+  \gdef\currsection{#1}%
+}
+\renewcommand{\subsectionmark}[1]{%
+  \markright{\currsection\ \textbullet\ #1}%
+}
+
+\newcommand{\infobox}[1]{
+    \begin{wrapfigure}{r}{5cm}
+        \centering
+        \includegraphics[width=5cm]{#1}
+    \end{wrapfigure}
+}
+
+\let\oldsection\section
+\renewcommand\section{\clearpage\oldsection}
+
+\begin{document}
+\input{characters.tex}
+\input{locations.tex}
+\end{document}
