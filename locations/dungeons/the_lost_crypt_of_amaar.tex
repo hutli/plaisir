@@ -1,12 +1,48 @@
 \section*{The Lost Crypt of Amaar}
 
 \begin{center}
-\begin{tikzpicture}[scale=0.5]
-    \mapGrid{20}{20}
-    \room{0}{0}{5}
-    \room{2}{5}{1}
-    \door{2}{5}
-    \room{0}{6}{5}
-    \door{2}{6}
-\end{tikzpicture}
+    \scalebox{0.5}{
+        \begin{tikzpicture}
+            % Rooms
+            \roomSquare{1}{0}{5}
+            \annotaton{3}{2}{1}
+            \roomRectangular{1}{7}{5}{9}{red}
+            \annotaton{3}{11}{3}
+            \roomRectangular{0}{16}{7}{5}{gray!20}
+            \annotaton{3}{18}{4}
+            \roomRectangular{0}{26}{7}{5}{white}
+            \annotaton{3}{28}{6}
+            \roomCircle{0}{31}{7}{white}
+            \annotaton{3}{34}{7}
+
+            % Hallways
+            \roomRectangular{3}{5}{1}{2}{white}
+            \annotaton{3}{5.5}{2}
+            \roomRectangular{2}{21}{3}{5}{white}
+            \annotaton{3}{23}{5}
+
+            % Misc
+            \roomRectangular{2}{7}{3}{1}{gray}
+            \roomRectangular{2}{15}{3}{1}{gray}
+            \pillar{1}{ 9}
+            \pillar{4}{10}
+            \pillar{5}{ 8}
+            \pillar{5}{12}
+            \pillar{3}{13}
+            \pillar{1}{14}
+            \pillar{2}{11}
+
+            % Doors
+            \doorClosed{3}{0}
+            \doorClosed{3}{5}
+            \doorClosed{3}{7}
+            \doorClosed{3}{16}
+            \doorClosed{3}{21}
+            \doorClosed{3}{26}
+            \doorClosed{3}{31}
+            
+            % Grid
+            \mapGrid{7}{38}
+        \end{tikzpicture}
+    }
 \end{center}

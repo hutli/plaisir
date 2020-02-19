@@ -1,11 +1,31 @@
 \newcommand\mapGrid[2]{
-    \draw[step=1.0,gray,thin,dashed] (-0.5,-0.5) grid (#1 + 0.5,#2 + 0.5);
+    \draw[step=1,black,thin,dashed,opacity=0.5] (-0.5,-0.5) grid (#1 + 0.5,#2 + 0.5);
 }
 
-\newcommand\room[3]{
+% Rooms
+\newcommand\roomSquare[3]{
     \draw[thick] (#1,#2) -- (#1+#3,#2) -- (#1+#3,#2+#3) -- (#1,#2+#3) -- (#1,#2);
 }
+\newcommand\roomRectangular[5]{
+    \filldraw[draw=black,fill=#5] (#1,#2) rectangle (#1+#3,#2+#4);
+}
+\newcommand\roomCircle[4]{
+    \filldraw[draw=black,fill=#4] (#1+ #3 * 0.5,#2 + #3 * 0.5) circle (#3 * 0.5 cm);
+}
 
-\newcommand\door[2]{
+% Doors
+\newcommand\doorNone[2]{
     \draw[ultra thick, white] (#1+0.15,#2) -- (#1+0.85,#2);
+}
+\newcommand\doorClosed[2]{
+    \draw[line width=1mm, black] (#1+0.15,#2) -- (#1+0.85,#2);
+}
+
+% Misc
+\newcommand\annotaton[3]{
+    \draw[opacity=0,fill opacity=1] (#1,#2) rectangle (#1+1,#2+1) node[pos=.5] {\Huge \textbf{#3}};
+}
+
+\newcommand\pillar[2]{
+    \roomCircle{#1 + 0.1}{#2 + 0.1}{0.8}{gray}
 }
