@@ -3,7 +3,6 @@
 \usepackage{graphicx}
 \usepackage{lipsum}
 \usepackage{wrapfig}
-\usepackage[utf8]{inputenc}
 \usepackage{csquotes}
 \usepackage[english]{babel}
 \usepackage{fancyhdr}
@@ -13,73 +12,12 @@
 \usepackage{tikz}
 \usepackage{xstring}
 \usepackage{fontspec,kantlipsum}
+\usepackage{fontenc}
+
+\usetikzlibrary{decorations.text}
 
 \input{commands/map_commands.tex}
-
-%\newcommand\amaar[1]{{\usefont{T1}{Amaar}{m}{n} #1 }}
-\newfontfamily{\amaarFont}{Amaar}
-
-\newcommand{\amaar}[1]{{
-  \noexpandarg % suppress expansions made by xstring
-  \StrSubstitute{#1}                        {mystra}           {¡}[\x]%
-  \expandafter\StrSubstitute\expandafter{\x}{peace}            {¢}[\x]%
-  \expandafter\StrSubstitute\expandafter{\x}{the world trotter}{£}[\x]%
-  \expandafter\StrDel\expandafter{\x}{a}[\y]%
-  \expandafter\StrDel\expandafter{\y}{b}[\y]%
-  \expandafter\StrDel\expandafter{\y}{c}[\y]%
-  \expandafter\StrDel\expandafter{\y}{d}[\y]%
-  \expandafter\StrDel\expandafter{\y}{e}[\y]%
-  \expandafter\StrDel\expandafter{\y}{f}[\y]%
-  \expandafter\StrDel\expandafter{\y}{g}[\y]%
-  \expandafter\StrDel\expandafter{\y}{h}[\y]%
-  \expandafter\StrDel\expandafter{\y}{i}[\y]%
-  \expandafter\StrDel\expandafter{\y}{j}[\y]%
-  \expandafter\StrDel\expandafter{\y}{k}[\y]%
-  \expandafter\StrDel\expandafter{\y}{l}[\y]%
-  \expandafter\StrDel\expandafter{\y}{m}[\y]%
-  \expandafter\StrDel\expandafter{\y}{n}[\y]%
-  \expandafter\StrDel\expandafter{\y}{o}[\y]%
-  \expandafter\StrDel\expandafter{\y}{p}[\y]%
-  \expandafter\StrDel\expandafter{\y}{q}[\y]%
-  \expandafter\StrDel\expandafter{\y}{r}[\y]%
-  \expandafter\StrDel\expandafter{\y}{s}[\y]%
-  \expandafter\StrDel\expandafter{\y}{t}[\y]%
-  \expandafter\StrDel\expandafter{\y}{u}[\y]%
-  \expandafter\StrDel\expandafter{\y}{v}[\y]%
-  \expandafter\StrDel\expandafter{\y}{w}[\y]%
-  \expandafter\StrDel\expandafter{\y}{x}[\y]%
-  \expandafter\StrDel\expandafter{\y}{y}[\y]%
-  \expandafter\StrDel\expandafter{\y}{z}[\y]%
-  \expandafter\StrDel\expandafter{\y}{A}[\y]%
-  \expandafter\StrDel\expandafter{\y}{B}[\y]%
-  \expandafter\StrDel\expandafter{\y}{C}[\y]%
-  \expandafter\StrDel\expandafter{\y}{D}[\y]%
-  \expandafter\StrDel\expandafter{\y}{E}[\y]%
-  \expandafter\StrDel\expandafter{\y}{F}[\y]%
-  \expandafter\StrDel\expandafter{\y}{G}[\y]%
-  \expandafter\StrDel\expandafter{\y}{H}[\y]%
-  \expandafter\StrDel\expandafter{\y}{I}[\y]%
-  \expandafter\StrDel\expandafter{\y}{J}[\y]%
-  \expandafter\StrDel\expandafter{\y}{K}[\y]%
-  \expandafter\StrDel\expandafter{\y}{L}[\y]%
-  \expandafter\StrDel\expandafter{\y}{M}[\y]%
-  \expandafter\StrDel\expandafter{\y}{N}[\y]%
-  \expandafter\StrDel\expandafter{\y}{O}[\y]%
-  \expandafter\StrDel\expandafter{\y}{P}[\y]%
-  \expandafter\StrDel\expandafter{\y}{Q}[\y]%
-  \expandafter\StrDel\expandafter{\y}{R}[\y]%
-  \expandafter\StrDel\expandafter{\y}{S}[\y]%
-  \expandafter\StrDel\expandafter{\y}{T}[\y]%
-  \expandafter\StrDel\expandafter{\y}{U}[\y]%
-  \expandafter\StrDel\expandafter{\y}{V}[\y]%
-  \expandafter\StrDel\expandafter{\y}{W}[\y]%
-  \expandafter\StrDel\expandafter{\y}{X}[\y]%
-  \expandafter\StrDel\expandafter{\y}{Y}[\y]%
-  \expandafter\StrDel\expandafter{\y}{Z}[\y]%
-  \expandafter\StrDel\expandafter{\y}{ }[\y]%
-  \expandafter\StrDel\expandafter{\y}{.}[\y]%
-  \noindent\x\\
-  {\amaarFont \y}}}
+\input{commands/amaar.tex}
 
 \newtcolorbox{mybox}{colback=red!5!white,colframe=red!75!black,left=1pt, right=1pt, top=1pt, bottom=6pt}
 

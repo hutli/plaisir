@@ -1,0 +1,230 @@
+\newfontfamily{\amaarFont}{Amaar}
+\newcommand{\m}[1]{\colorbox{red!30}{#1}}
+
+\newcommand{\amaarTranslate}[1]{
+    \expandafter\StrSubstitute\expandafter{#1}{mystra}       {^^a1}             [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{king}         {^^a2}             [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{world trotter}{^^a3}             [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{represents}   {^^a3}             [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{peace}        {^^a4}             [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{announced}    {^^a5}             [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{hope}         {^^a6}             [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{death}        {^^a7}             [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{are gone}     {^^a7}             [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{you}          {^^a8}             [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{welcome}      {^^a9}             [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{sing}         {^^aa}             [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{song}         {^^ab}             [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{ i }          { ^^ac }           [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{ me}          { ^^ac}            [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{ my}          { ^^ac}            [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{person}       {^^ac}             [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{ we}          { ^^ad}            [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{people}       {^^ad}             [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{they}         {^^ad}             [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{their}        {^^ad}             [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{destruction}  {^^af}             [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{found}        {^^b0}             [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{find}         {^^b0}             [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{war}          {^^b1}             [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{ see }        { ^^b2 }           [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{ seen }       { ^^b2 }           [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{escape}       {^^b3}             [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{ end}         { ^^b4}            [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{task}         {^^b5}             [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{understand}   {^^b6}             [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{struggle}     {^^b7}             [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{ at }         {-}                [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{despite}      {^^b8}             [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{bring}        {^^b9}             [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{here}         {^^ba}             [\a]%
+
+    \expandafter\StrDel\expandafter{\a}{a}[\a]%
+    \expandafter\StrDel\expandafter{\a}{b}[\a]%
+    \expandafter\StrDel\expandafter{\a}{c}[\a]%
+    \expandafter\StrDel\expandafter{\a}{d}[\a]%
+    \expandafter\StrDel\expandafter{\a}{e}[\a]%
+    \expandafter\StrDel\expandafter{\a}{f}[\a]%
+    \expandafter\StrDel\expandafter{\a}{g}[\a]%
+    \expandafter\StrDel\expandafter{\a}{h}[\a]%
+    \expandafter\StrDel\expandafter{\a}{i}[\a]%
+    \expandafter\StrDel\expandafter{\a}{j}[\a]%
+    \expandafter\StrDel\expandafter{\a}{k}[\a]%
+    \expandafter\StrDel\expandafter{\a}{l}[\a]%
+    \expandafter\StrDel\expandafter{\a}{m}[\a]%
+    \expandafter\StrDel\expandafter{\a}{n}[\a]%
+    \expandafter\StrDel\expandafter{\a}{o}[\a]%
+    \expandafter\StrDel\expandafter{\a}{p}[\a]%
+    \expandafter\StrDel\expandafter{\a}{q}[\a]%
+    \expandafter\StrDel\expandafter{\a}{r}[\a]%
+    \expandafter\StrDel\expandafter{\a}{s}[\a]%
+    \expandafter\StrDel\expandafter{\a}{t}[\a]%
+    \expandafter\StrDel\expandafter{\a}{u}[\a]%
+    \expandafter\StrDel\expandafter{\a}{v}[\a]%
+    \expandafter\StrDel\expandafter{\a}{w}[\a]%
+    \expandafter\StrDel\expandafter{\a}{x}[\a]%
+    \expandafter\StrDel\expandafter{\a}{y}[\a]%
+    \expandafter\StrDel\expandafter{\a}{z}[\a]%
+    \expandafter\StrDel\expandafter{\a}{ }[\a]%
+    \a
+}
+
+\newcommand{\amaar}[3]{{
+    \noexpandarg % suppress expansions made by xstring
+    \StrSubstitute                        {#3}{A}{a}[\z]%
+    \expandafter\StrSubstitute\expandafter{\z}{B}{b}[\z]%
+    \expandafter\StrSubstitute\expandafter{\z}{C}{c}[\z]%
+    \expandafter\StrSubstitute\expandafter{\z}{D}{d}[\z]%
+    \expandafter\StrSubstitute\expandafter{\z}{E}{e}[\z]%
+    \expandafter\StrSubstitute\expandafter{\z}{F}{f}[\z]%
+    \expandafter\StrSubstitute\expandafter{\z}{G}{g}[\z]%
+    \expandafter\StrSubstitute\expandafter{\z}{H}{h}[\z]%
+    \expandafter\StrSubstitute\expandafter{\z}{I}{i}[\z]%
+    \expandafter\StrSubstitute\expandafter{\z}{J}{j}[\z]%
+    \expandafter\StrSubstitute\expandafter{\z}{K}{k}[\z]%
+    \expandafter\StrSubstitute\expandafter{\z}{L}{l}[\z]%
+    \expandafter\StrSubstitute\expandafter{\z}{M}{m}[\z]%
+    \expandafter\StrSubstitute\expandafter{\z}{N}{n}[\z]%
+    \expandafter\StrSubstitute\expandafter{\z}{O}{o}[\z]%
+    \expandafter\StrSubstitute\expandafter{\z}{P}{p}[\z]%
+    \expandafter\StrSubstitute\expandafter{\z}{Q}{q}[\z]%
+    \expandafter\StrSubstitute\expandafter{\z}{R}{r}[\z]%
+    \expandafter\StrSubstitute\expandafter{\z}{S}{s}[\z]%
+    \expandafter\StrSubstitute\expandafter{\z}{T}{t}[\z]%
+    \expandafter\StrSubstitute\expandafter{\z}{U}{u}[\z]%
+    \expandafter\StrSubstitute\expandafter{\z}{V}{v}[\z]%
+    \expandafter\StrSubstitute\expandafter{\z}{W}{w}[\z]%
+    \expandafter\StrSubstitute\expandafter{\z}{X}{x}[\z]%
+    \expandafter\StrSubstitute\expandafter{\z}{Y}{y}[\z]%
+    \expandafter\StrSubstitute\expandafter{\z}{Z}{z}[\z]%
+
+    \expandafter\StrSubstitute\expandafter{\z}{mystra}       {^^a1}             [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{king}         {^^a2}             [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{world trotter}{^^a3}             [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{represents}   {^^a3}             [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{peace}        {^^a4}             [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{announced}    {^^a5}             [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{hope}         {^^a6}             [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{death}        {^^a7}             [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{are gone}     {^^a7}             [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{you}          {^^a8}             [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{welcome}      {^^a9}             [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{sing}         {^^aa}             [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{song}         {^^ab}             [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{ i }          { ^^ac }           [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{ me }         { ^^ac }           [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{ my}          { ^^ac}            [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{person}       {^^ac}             [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{ we}          { ^^ad}            [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{people}       {^^ad}             [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{they}         {^^ad}             [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{their}        {^^ad}             [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{destruction}  {^^af}             [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{found}        {^^b0}             [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{find}         {^^b0}             [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{war}          {^^b1}             [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{ see }        { ^^b2 }           [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{ seen }       { ^^b2 }           [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{escape}       {^^b3}             [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{ end}         { ^^b4}            [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{task}         {^^b5}             [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{understand}   {^^b6}             [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{struggle}     {^^b7}             [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{ at }         {-}                [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{despite}      {^^b8}             [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{bring}        {^^b9}             [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{here}         {^^ba}             [\y]%
+
+    \expandafter\StrDel\expandafter{\y}{a}[\y]%
+    \expandafter\StrDel\expandafter{\y}{b}[\y]%
+    \expandafter\StrDel\expandafter{\y}{c}[\y]%
+    \expandafter\StrDel\expandafter{\y}{d}[\y]%
+    \expandafter\StrDel\expandafter{\y}{e}[\y]%
+    \expandafter\StrDel\expandafter{\y}{f}[\y]%
+    \expandafter\StrDel\expandafter{\y}{g}[\y]%
+    \expandafter\StrDel\expandafter{\y}{h}[\y]%
+    \expandafter\StrDel\expandafter{\y}{i}[\y]%
+    \expandafter\StrDel\expandafter{\y}{j}[\y]%
+    \expandafter\StrDel\expandafter{\y}{k}[\y]%
+    \expandafter\StrDel\expandafter{\y}{l}[\y]%
+    \expandafter\StrDel\expandafter{\y}{m}[\y]%
+    \expandafter\StrDel\expandafter{\y}{n}[\y]%
+    \expandafter\StrDel\expandafter{\y}{o}[\y]%
+    \expandafter\StrDel\expandafter{\y}{p}[\y]%
+    \expandafter\StrDel\expandafter{\y}{q}[\y]%
+    \expandafter\StrDel\expandafter{\y}{r}[\y]%
+    \expandafter\StrDel\expandafter{\y}{s}[\y]%
+    \expandafter\StrDel\expandafter{\y}{t}[\y]%
+    \expandafter\StrDel\expandafter{\y}{u}[\y]%
+    \expandafter\StrDel\expandafter{\y}{v}[\y]%
+    \expandafter\StrDel\expandafter{\y}{w}[\y]%
+    \expandafter\StrDel\expandafter{\y}{x}[\y]%
+    \expandafter\StrDel\expandafter{\y}{y}[\y]%
+    \expandafter\StrDel\expandafter{\y}{z}[\y]%
+    \expandafter\StrDel\expandafter{\y}{ }[\y]%
+
+    \expandafter\StrSubstitute\expandafter{\z}{mystra}       {\m{mystra}}       [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{king}         {\m{king}}         [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{world trotter}{\m{world trotter}}[\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{represents}   {\m{represents}}   [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{peace}        {\m{peace}}        [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{announced}    {\m{announced}}    [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{hope}         {\m{hope}}         [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{death}        {\m{death}}        [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{are gone}     {\m{are gone}}     [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{you}          {\m{you}}          [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{welcome}      {\m{welcome}}      [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{sing}         {\m{sing}}         [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{song}         {\m{song}}         [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{ i }          { \m{i} }          [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{ me }         { \m{me} }         [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{ my}          { \m{my}}          [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{person}       {\m{person}}       [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{ we}          { \m{we}}          [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{people}       {\m{people}}       [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{they}         {\m{they}}         [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{their}        {\m{their}}        [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{destruction}  {\m{destruction}}  [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{found}        {\m{found}}        [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{find}         {\m{find}}         [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{war}          {\m{war}}          [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{ see }        { \m{see} }        [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{ seen }       { \m{seen} }       [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{escape}       {\m{escape}}       [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{ end}         { \m{end}}         [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{task}         {\m{task}}         [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{understand}   {\m{understand}}   [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{struggle}     {\m{struggle}}     [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{ at }         { \m{at} }         [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{despite}      {\m{despite}}      [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{bring}        {\m{bring}}        [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{here}         {\m{here}}         [\x]%
+    
+    \pgfmathsetmacro{\domain}{pi*82/180+4*2*pi}
+
+    \begin{figure}
+        \begin{minipage}[t]{.49\textwidth}
+            \textbf{English:}\\
+            \noindent \x
+        \end{minipage}%
+        \hfill
+        \begin{minipage}[t]{0.49\textwidth}
+            \begin{flushright}
+                \textbf{Listeners:}\\
+                \amaarFont\fontsize{35pt}{35pt}\selectfont\begin{tikzpicture}[
+                    decoration/.expanded={
+                        reverse path,
+                        text effects along path,
+                        text= {{\y}},
+                        text effects/.cd,
+                        character widths={inner xsep=0.25ex},
+                        characters={scale=1}
+                      }]
+                    \draw[decorate,domain=0:\domain,variable=\t,samples=int(\domain/0.08)] (0,0) plot ({\t r}: {3*\t/\domain});
+                    \node at (0,0) {\fontsize{40pt}{40pt}\selectfont \amaarTranslate{#2}};
+                    \node at (0,3) {\fontsize{40pt}{40pt}\selectfont \amaarTranslate{#1}};
+                \end{tikzpicture}
+            \end{flushright}
+        \end{minipage}
+    \end{figure}
+}}
