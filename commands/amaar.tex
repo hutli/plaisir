@@ -13,16 +13,19 @@
     \expandafter\StrSubstitute\expandafter{\a}{are gone}     {^^a7}             [\a]%
     \expandafter\StrSubstitute\expandafter{\a}{you}          {^^a8}             [\a]%
     \expandafter\StrSubstitute\expandafter{\a}{welcome}      {^^a9}             [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{heart}        {^^a9}             [\a]%
     \expandafter\StrSubstitute\expandafter{\a}{sing}         {^^aa}             [\a]%
     \expandafter\StrSubstitute\expandafter{\a}{song}         {^^ab}             [\a]%
     \expandafter\StrSubstitute\expandafter{\a}{ i }          { ^^ac }           [\a]%
     \expandafter\StrSubstitute\expandafter{\a}{ me}          { ^^ac}            [\a]%
     \expandafter\StrSubstitute\expandafter{\a}{ my}          { ^^ac}            [\a]%
     \expandafter\StrSubstitute\expandafter{\a}{person}       {^^ac}             [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{her }         {^^ac }            [\a]%
     \expandafter\StrSubstitute\expandafter{\a}{ we}          { ^^ad}            [\a]%
     \expandafter\StrSubstitute\expandafter{\a}{people}       {^^ad}             [\a]%
     \expandafter\StrSubstitute\expandafter{\a}{they}         {^^ad}             [\a]%
     \expandafter\StrSubstitute\expandafter{\a}{their}        {^^ad}             [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{ other}       { ^^ad}            [\a]%
     \expandafter\StrSubstitute\expandafter{\a}{destruction}  {^^af}             [\a]%
     \expandafter\StrSubstitute\expandafter{\a}{found}        {^^b0}             [\a]%
     \expandafter\StrSubstitute\expandafter{\a}{find}         {^^b0}             [\a]%
@@ -32,12 +35,18 @@
     \expandafter\StrSubstitute\expandafter{\a}{escape}       {^^b3}             [\a]%
     \expandafter\StrSubstitute\expandafter{\a}{ end}         { ^^b4}            [\a]%
     \expandafter\StrSubstitute\expandafter{\a}{task}         {^^b5}             [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{problem}      {^^b5}             [\a]%
     \expandafter\StrSubstitute\expandafter{\a}{understand}   {^^b6}             [\a]%
     \expandafter\StrSubstitute\expandafter{\a}{struggle}     {^^b7}             [\a]%
     \expandafter\StrSubstitute\expandafter{\a}{ at }         {-}                [\a]%
     \expandafter\StrSubstitute\expandafter{\a}{despite}      {^^b8}             [\a]%
     \expandafter\StrSubstitute\expandafter{\a}{bring}        {^^b9}             [\a]%
     \expandafter\StrSubstitute\expandafter{\a}{here}         {^^ba}             [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{agony}        {^^bb}             [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{problems}     {^^bc}             [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{above}        {^^bd}             [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{ win}         { ^^be}            [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{risk}         {^^bf}             [\a]%
 
     \expandafter\StrDel\expandafter{\a}{a}[\a]%
     \expandafter\StrDel\expandafter{\a}{b}[\a]%
@@ -69,7 +78,7 @@
     \a
 }
 
-\newcommand{\amaar}[3]{{
+\newcommand{\amaar}[5]{{
     \noexpandarg % suppress expansions made by xstring
     \StrSubstitute                        {#3}{A}{a}[\z]%
     \expandafter\StrSubstitute\expandafter{\z}{B}{b}[\z]%
@@ -109,16 +118,19 @@
     \expandafter\StrSubstitute\expandafter{\y}{are gone}     {^^a7}             [\y]%
     \expandafter\StrSubstitute\expandafter{\y}{you}          {^^a8}             [\y]%
     \expandafter\StrSubstitute\expandafter{\y}{welcome}      {^^a9}             [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{heart}        {^^a9}             [\y]%
     \expandafter\StrSubstitute\expandafter{\y}{sing}         {^^aa}             [\y]%
     \expandafter\StrSubstitute\expandafter{\y}{song}         {^^ab}             [\y]%
     \expandafter\StrSubstitute\expandafter{\y}{ i }          { ^^ac }           [\y]%
     \expandafter\StrSubstitute\expandafter{\y}{ me }         { ^^ac }           [\y]%
     \expandafter\StrSubstitute\expandafter{\y}{ my}          { ^^ac}            [\y]%
     \expandafter\StrSubstitute\expandafter{\y}{person}       {^^ac}             [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{her}          {^^ac }            [\y]%
     \expandafter\StrSubstitute\expandafter{\y}{ we}          { ^^ad}            [\y]%
     \expandafter\StrSubstitute\expandafter{\y}{people}       {^^ad}             [\y]%
     \expandafter\StrSubstitute\expandafter{\y}{they}         {^^ad}             [\y]%
     \expandafter\StrSubstitute\expandafter{\y}{their}        {^^ad}             [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{ other}       { ^^ad}            [\y]%
     \expandafter\StrSubstitute\expandafter{\y}{destruction}  {^^af}             [\y]%
     \expandafter\StrSubstitute\expandafter{\y}{found}        {^^b0}             [\y]%
     \expandafter\StrSubstitute\expandafter{\y}{find}         {^^b0}             [\y]%
@@ -134,6 +146,11 @@
     \expandafter\StrSubstitute\expandafter{\y}{despite}      {^^b8}             [\y]%
     \expandafter\StrSubstitute\expandafter{\y}{bring}        {^^b9}             [\y]%
     \expandafter\StrSubstitute\expandafter{\y}{here}         {^^ba}             [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{agony}        {^^bb}             [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{problems}     {^^bc}             [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{above}        {^^bd}             [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{ win}         { ^^be}            [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{risk}         {^^bf}             [\y]%
 
     \expandafter\StrDel\expandafter{\y}{a}[\y]%
     \expandafter\StrDel\expandafter{\y}{b}[\y]%
@@ -174,16 +191,19 @@
     \expandafter\StrSubstitute\expandafter{\x}{are gone}     {\m{are gone}}     [\x]%
     \expandafter\StrSubstitute\expandafter{\x}{you}          {\m{you}}          [\x]%
     \expandafter\StrSubstitute\expandafter{\x}{welcome}      {\m{welcome}}      [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{heart}        {\m{heart}}        [\x]%
     \expandafter\StrSubstitute\expandafter{\x}{sing}         {\m{sing}}         [\x]%
     \expandafter\StrSubstitute\expandafter{\x}{song}         {\m{song}}         [\x]%
     \expandafter\StrSubstitute\expandafter{\x}{ i }          { \m{i} }          [\x]%
     \expandafter\StrSubstitute\expandafter{\x}{ me }         { \m{me} }         [\x]%
     \expandafter\StrSubstitute\expandafter{\x}{ my}          { \m{my}}          [\x]%
     \expandafter\StrSubstitute\expandafter{\x}{person}       {\m{person}}       [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{her }         {\m{her} }         [\x]%
     \expandafter\StrSubstitute\expandafter{\x}{ we}          { \m{we}}          [\x]%
     \expandafter\StrSubstitute\expandafter{\x}{people}       {\m{people}}       [\x]%
     \expandafter\StrSubstitute\expandafter{\x}{they}         {\m{they}}         [\x]%
     \expandafter\StrSubstitute\expandafter{\x}{their}        {\m{their}}        [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{ other}       { \m{other}}       [\x]%
     \expandafter\StrSubstitute\expandafter{\x}{destruction}  {\m{destruction}}  [\x]%
     \expandafter\StrSubstitute\expandafter{\x}{found}        {\m{found}}        [\x]%
     \expandafter\StrSubstitute\expandafter{\x}{find}         {\m{find}}         [\x]%
@@ -199,32 +219,33 @@
     \expandafter\StrSubstitute\expandafter{\x}{despite}      {\m{despite}}      [\x]%
     \expandafter\StrSubstitute\expandafter{\x}{bring}        {\m{bring}}        [\x]%
     \expandafter\StrSubstitute\expandafter{\x}{here}         {\m{here}}         [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{agony}        {\m{agony}}        [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{problems}     {\m{problems}}     [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{above}        {\m{above}}        [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{ win}         { \m{win}}         [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{risk}         {\m{risk}}         [\x]%
     
-    \pgfmathsetmacro{\domain}{pi*82/180+4*2*pi}
+    \pgfmathsetmacro{\domain}{pi*82/180+#5*2*pi}
 
+    \textbf{State-2 English:}\\
+    From #1, to #2\\
+    \noindent \x\\
+    \textbf{Listeners:}\\
     \begin{figure}
-        \begin{minipage}[t]{.49\textwidth}
-            \textbf{English:}\\
-            \noindent \x
-        \end{minipage}%
-        \hfill
-        \begin{minipage}[t]{0.49\textwidth}
-            \begin{flushright}
-                \textbf{Listeners:}\\
-                \amaarFont\fontsize{35pt}{35pt}\selectfont\begin{tikzpicture}[
-                    decoration/.expanded={
-                        reverse path,
-                        text effects along path,
-                        text= {{\y}},
-                        text effects/.cd,
-                        character widths={inner xsep=0.25ex},
-                        characters={scale=1}
-                      }]
-                    \draw[decorate,domain=0:\domain,variable=\t,samples=int(\domain/0.08)] (0,0) plot ({\t r}: {3*\t/\domain});
-                    \node at (0,0) {\fontsize{40pt}{40pt}\selectfont \amaarTranslate{#2}};
-                    \node at (0,3) {\fontsize{40pt}{40pt}\selectfont \amaarTranslate{#1}};
-                \end{tikzpicture}
-            \end{flushright}
-        \end{minipage}
+        \resizebox{\textwidth}{!}{%
+            \amaarFont\fontsize{35pt}{35pt}\selectfont\begin{tikzpicture}[
+                decoration/.expanded={
+                    reverse path,
+                    text effects along path,
+                    text= {{\y}},
+                    text effects/.cd,
+                    character widths={inner xsep=#4 ex},
+                    characters={scale=1}
+                    }]
+                \draw[decorate,domain=0:\domain,variable=\t,samples=int(\domain/0.08)] (0,0) plot ({\t r}: {3*\t/\domain});
+                \node at (0,0) {\fontsize{40pt}{40pt}\selectfont \amaarTranslate{#2}};
+                \node at (0,3) {\fontsize{40pt}{40pt}\selectfont \amaarTranslate{#1}};
+            \end{tikzpicture}
+        }
     \end{figure}
 }}
