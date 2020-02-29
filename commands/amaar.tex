@@ -17,7 +17,8 @@
     \expandafter\StrSubstitute\expandafter{\a}{sing}         {^^aa}             [\a]%
     \expandafter\StrSubstitute\expandafter{\a}{song}         {^^ab}             [\a]%
     \expandafter\StrSubstitute\expandafter{\a}{ i }          { ^^ac }           [\a]%
-    \expandafter\StrSubstitute\expandafter{\a}{ me}          { ^^ac}            [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{ me }         { ^^ac }           [\a]%
+    \expandafter\StrSubstitute\expandafter{\a}{ me-}         { ^^ac-}           [\a]%
     \expandafter\StrSubstitute\expandafter{\a}{ my}          { ^^ac}            [\a]%
     \expandafter\StrSubstitute\expandafter{\a}{person}       {^^ac}             [\a]%
     \expandafter\StrSubstitute\expandafter{\a}{her }         {^^ac }            [\a]%
@@ -78,9 +79,9 @@
     \a
 }
 
-\newcommand{\amaar}[5]{{
+\newcommand{\amaar}[6]{{
     \noexpandarg % suppress expansions made by xstring
-    \StrSubstitute                        {#3}{A}{a}[\z]%
+    \StrSubstitute                        {#4}{A}{a}[\z]%
     \expandafter\StrSubstitute\expandafter{\z}{B}{b}[\z]%
     \expandafter\StrSubstitute\expandafter{\z}{C}{c}[\z]%
     \expandafter\StrSubstitute\expandafter{\z}{D}{d}[\z]%
@@ -123,6 +124,7 @@
     \expandafter\StrSubstitute\expandafter{\y}{song}         {^^ab}             [\y]%
     \expandafter\StrSubstitute\expandafter{\y}{ i }          { ^^ac }           [\y]%
     \expandafter\StrSubstitute\expandafter{\y}{ me }         { ^^ac }           [\y]%
+    \expandafter\StrSubstitute\expandafter{\y}{ me-}         { ^^ac-}           [\y]%
     \expandafter\StrSubstitute\expandafter{\y}{ my}          { ^^ac}            [\y]%
     \expandafter\StrSubstitute\expandafter{\y}{person}       {^^ac}             [\y]%
     \expandafter\StrSubstitute\expandafter{\y}{her}          {^^ac }            [\y]%
@@ -196,6 +198,7 @@
     \expandafter\StrSubstitute\expandafter{\x}{song}         {\m{song}}         [\x]%
     \expandafter\StrSubstitute\expandafter{\x}{ i }          { \m{i} }          [\x]%
     \expandafter\StrSubstitute\expandafter{\x}{ me }         { \m{me} }         [\x]%
+    \expandafter\StrSubstitute\expandafter{\x}{ me-}         { \m{me}-}         [\x]%
     \expandafter\StrSubstitute\expandafter{\x}{ my}          { \m{my}}          [\x]%
     \expandafter\StrSubstitute\expandafter{\x}{person}       {\m{person}}       [\x]%
     \expandafter\StrSubstitute\expandafter{\x}{her }         {\m{her} }         [\x]%
@@ -225,28 +228,36 @@
     \expandafter\StrSubstitute\expandafter{\x}{ win}         { \m{win}}         [\x]%
     \expandafter\StrSubstitute\expandafter{\x}{risk}         {\m{risk}}         [\x]%
     
-    \pgfmathsetmacro{\domain}{pi*82/180+#5*2*pi}
+    \pgfmathsetmacro{\domain}{pi*82/180+#6*2*pi}
 
-    \textbf{State-2 English:}\\
-    From #1, to #2\\
-    \noindent \x\\
-    \textbf{Listeners:}\\
-    ­\y
-    \amaarFont\fontsize{35pt}{35pt}\selectfont\begin{figure}
-        \resizebox{\textwidth}{!}{%
-            \begin{tikzpicture}[
+    \begin{figure}
+        \begin{minipage}[t]{.49\textwidth}
+            \textbf{1st-Stage English:}\\
+            From #1, to #2\\
+            \noindent #3
+        \end{minipage}
+        \hfill
+        \begin{minipage}[t]{.49\textwidth}
+            \textbf{2nd-Stage English:}\\
+            From #1, to #2\\
+            \noindent \x
+        \end{minipage}
+        \begin{flushleft}
+            \textbf{Listeners:}\\
+            \resizebox{\textwidth}{!}{%
+            \amaarFont\fontsize{35pt}{35pt}\selectfont\begin{tikzpicture}[
                 decoration/.expanded={
                     reverse path,
                     text effects along path,
                     text= {{\y}},
                     text effects/.cd,
-                    character widths={inner xsep=#4 ex},
+                    character widths={inner xsep=#5 ex},
                     characters={scale=1}
                     }]
                 \draw[decorate,domain=0:\domain,variable=\t,samples=int(\domain/0.08)] (0,0) plot ({\t r}: {3*\t/\domain});
                 \node at (0,0) {\fontsize{40pt}{40pt}\selectfont \amaarTranslate{#2}};
                 \node at (0,3) {\fontsize{40pt}{40pt}\selectfont \amaarTranslate{#1}};
-            \end{tikzpicture}
-        }
+            \end{tikzpicture}}
+        \end{flushleft}
     \end{figure}
 }}
