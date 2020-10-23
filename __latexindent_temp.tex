@@ -1,0 +1,77 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{wrapfig}
+\usepackage{csquotes}
+\usepackage[english]{babel}
+\usepackage{fancyhdr}
+\usepackage{tcolorbox}
+\usepackage{tabularx}
+\usepackage{nameref}
+\usepackage{tikz}
+\usepackage{xstring}
+\usepackage{fontspec,kantlipsum}
+\usepackage{fontenc}
+
+\usetikzlibrary{decorations.text}
+
+\input{commands/map_commands.tex}
+\input{commands/amaar.tex}
+
+\newtcolorbox{mybox}{colback=red!5!white,colframe=red!75!black,left=1pt, right=1pt, top=1pt, bottom=6pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\rightmark}
+
+\setlength{\headheight}{14.5pt}
+\setcounter{secnumdepth}{0}
+
+\newcommand\chapter[1]{%
+  \refstepcounter{section}%
+  \addcontentsline{toc}{section}{#1}%
+  \sectionmark{#1}%
+}
+
+\newcommand\subchapter[1]{%
+  \refstepcounter{subsection}%
+  \addcontentsline{toc}{subsection}{#1}%
+  \subsectionmark{#1}%
+}
+
+\renewcommand{\sectionmark}[1]{%
+  \gdef\currsection{#1}%
+}
+\renewcommand{\subsectionmark}[1]{%
+  \markright{\currsection\ \textbullet\ #1}%
+}
+
+\newcommand{\infobox}[3]{
+    \begin{wrapfigure}{r}{5cm}
+      \begin{mybox}
+        \begin{center}
+          \includegraphics[width=4.5cm]{#1}
+        \end{center}
+        \begin{tabularx}{\textwidth}{l}
+          \hline\\
+          \large \textbf{Alignment}\\
+          #2\\\\
+          \hline\\
+          \large \textbf{Race}\\
+          #3\\\\
+          \hline
+        \end{tabularx}
+      \end{mybox}
+    \end{wrapfigure}
+}
+
+\let\oldsection\section
+\renewcommand\section{\clearpage\oldsection}
+
+\begin{document}
+\input{characters.tex}
+\input{locations.tex}
+\input{adventures.tex}
+\input{gods.tex}
+\end{document}
